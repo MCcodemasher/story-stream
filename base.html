@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Story Stream</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .para-image {
+        height: 600px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        margin: 0 auto; /* Center it */
+    }
+
+    .para-image .content {
+        position: absolute; /* Position the background text */
+        bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1; /* Grey text */
+        width: 100%; /* Full width */
+        padding: 20px;
+    }
+
+    /* Some padding */
+
+    body, html {
+        height: 100%;
+    }
+
+    /* The hero image */
+    .hero-image {
+
+        /* Set a specific height */
+        height: 50%;
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    /* Place text in the middle of the image */
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    /* Style the header: fixed position (always stay at the top) */
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+
+    /* The progress container (grey background) */
+    .progress-container {
+        width: 100%;
+        height: 8px;
+        background: #ccc;
+    }
+
+    /* The progress bar (scroll indicator) */
+    .progress-bar {
+        height: 8px;
+        background: #4caf50;
+        width: 0%;
+    }
+
+    /*align audio container with top and left margins */
+    .audio-container {
+        margin-top: 120px;
+        margin-left: 550px;
+    }
+
+    /*add top and bottom margins to key containers */
+    .container-top-bot-margins {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+
+    /*add rounded to image, plus a slight top margin for vertical alignment */
+    .rounded-image {
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+
+    /*text title with margins */
+    .text-title {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: white;
+    }
+
+
+</style>
+
+<script>
+    // When the user scrolls the page, execute scrollerer
+    window.onscroll = function () {
+        scrollerer()
+    };
+
+    function scrollerer() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+<body>
+
+<!-- YOUR CONTENT GOES HERE -->
+
+</body>
+</html>
